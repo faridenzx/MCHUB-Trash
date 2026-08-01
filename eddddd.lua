@@ -7,7 +7,6 @@ local Section = Tab:NewSection("Automation Settings")
 local autoBidEnabled = false
 local autoPastEnabled = false
 
--- [ บริการและตัวแปรพื้นฐาน ]
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local LocalPlayer = Players.LocalPlayer
@@ -15,7 +14,6 @@ local LocalPlayer = Players.LocalPlayer
 local itemPrice = 0.17
 local placeDelay = 0.5
 
--- [ ตัวแปร Events ทั้งหมด ]
 local _Events = ReplicatedStorage:WaitForChild('Events')
 local _Auction = _Events:WaitForChild('Auction')
 local BidEvent = _Auction:WaitForChild('Bid')
