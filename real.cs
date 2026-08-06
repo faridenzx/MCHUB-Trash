@@ -98,7 +98,7 @@ function Edited.CreateMain(gameName, subtitle)
     tabListLayout = Instance.new("UIListLayout")
     emptyFrame1 = Instance.new("Frame")
     FrameFolder = Instance.new("Folder")
-    MenuPage = Instance.new("ScrollingFrame")
+    MenuPage = Instance.new("Frame") -- เปลี่ยนจาก ScrollingFrame เป็น Frame ปกติเพื่อให้เลื่อนไม่ได้
     LocalFrame = Instance.new("Frame")
     localFrameCorner = Instance.new("UICorner")
     PlayerImageLabel = Instance.new("ImageLabel")
@@ -322,6 +322,8 @@ function Edited.CreateMain(gameName, subtitle)
     emptyFrame1.Size = UDim2.new(0, 100, 0, 0)
     FrameFolder.Name = "FrameFolder"
     FrameFolder.Parent = MainFrame
+    
+    -- ตั้งค่า MenuPage เป็น Instance.new("Frame") แทน ScrollingFrame
     MenuPage.Name = "MenuPage"
     MenuPage.Parent = FrameFolder
     MenuPage.Active = true
@@ -330,10 +332,7 @@ function Edited.CreateMain(gameName, subtitle)
     MenuPage.BorderColor3 = Color3.fromRGB(30, 30, 30)
     MenuPage.Position = UDim2.new(0.266000002, 0, 0.159999996, 0)
     MenuPage.Size = UDim2.new(0, 303, 0, 170)
-    MenuPage.CanvasSize = UDim2.new(0, 0, 2.9, 0)
-    MenuPage.ScrollBarThickness = 0
     MenuPage.Visible = true
-    MenuPage.ScrollingDirection = Enum.ScrollingDirection.Y
     table.insert(activePages, MenuPage)
     menuPageLayout.Parent = MenuPage
     menuPageLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
