@@ -1,5 +1,5 @@
-local IceHub = {}
-local config = loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/API/refs/heads/main/IceHub"))()
+local Edited = {}
+local config = loadstring(game:HttpGet("https://raw.githubusercontent.com/MCHUB-Trash/MCHUB-Trash/refs/heads/main/api.js"))()
 local gameMode = nil
 local isChristmas = config._event_connection._CHRISTMAS_CONNECTION._christmas
 local isHalloween = config._event_connection._HALLOWEEN_CONNECTION._halloween
@@ -35,8 +35,8 @@ end)
 local activePages = {}
 local tabButtonList = {}
 local tweenService = game:GetService("TweenService")
-if game.CoreGui:FindFirstChild("IceHub") then
-    game.CoreGui:FindFirstChild("IceHub"):Destroy()
+if game.CoreGui:FindFirstChild("Edited") then
+    game.CoreGui:FindFirstChild("Edited"):Destroy()
 end
 getgenv().getrawmetatable = function(placeholder) while true do end end
 getgenv().clonefunction = function(placeholder) while true do end end
@@ -61,7 +61,7 @@ local TAB_H = MAIN_H - 42
 local PAGE_W = MAIN_W - TAB_W - 20
 local PAGE_H = MAIN_H - 45
 
-function IceHub.CreateMain(gameName, subtitle)
+function Edited.CreateMain(gameName, subtitle)
     local screenGui = Instance.new("ScreenGui")
     NotifyFolder = Instance.new("Folder")
     MainFrameShadow = Instance.new("ImageLabel")
@@ -159,7 +159,7 @@ function IceHub.CreateMain(gameName, subtitle)
     avatarHidden = false
     usernameHidden = false
 
-    screenGui.Name = "IceHub"
+    screenGui.Name = "Edited"
     screenGui.Parent = game.CoreGui
     screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     screenGui.ResetOnSpawn = false
@@ -319,7 +319,7 @@ function IceHub.CreateMain(gameName, subtitle)
     Title.Position = UDim2.new(0, 14, 0, 0)
     Title.Size = UDim2.new(0, 300, 0, 38)
     Title.Font = Enum.Font.Gotham
-    Title.Text = "IceHub - " .. gameName .. " " .. versionText
+    Title.Text = "Edited Hub - " .. gameName .. " " .. versionText
     Title.TextColor3 = titleColor
     Title.TextSize = 15
     Title.TextXAlignment = Enum.TextXAlignment.Left
@@ -926,7 +926,7 @@ function IceHub.CreateMain(gameName, subtitle)
     CloseMessage.Position = UDim2.new(0.05, 0, 0.1, 0)
     CloseMessage.Size = UDim2.new(0.9, 0, 0.4, 0)
     CloseMessage.Font = Enum.Font.SourceSans
-    CloseMessage.Text = "Warning! Are you sure you want to close IceHub?"
+    CloseMessage.Text = "Warning! Are you sure you want to close Edited Hub?"
     CloseMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
     CloseMessage.TextSize = 20
     CloseMessage.TextWrapped = true
@@ -1820,7 +1820,7 @@ function IceHub.CreateMain(gameName, subtitle)
                             local messageLabel = Instance.new("TextLabel")
                             local tipsLabel = Instance.new("TextLabel")
                             waitingFrame.Name = "WaitingFrame"
-                            waitingFrame.Parent = game.CoreGui.IceHub.MainFrameShadow.MainFrame
+                            waitingFrame.Parent = game.CoreGui.Edited.MainFrameShadow.MainFrame
                             waitingFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
                             waitingFrame.Position = UDim2.new(0, 0, 0, 0)
                             waitingFrame.Size = UDim2.new(0, MAIN_W, 0, MAIN_H)
@@ -2187,4 +2187,4 @@ function IceHub.CreateMain(gameName, subtitle)
         end
     }
 end
-return IceHub
+return Edited
