@@ -1,10 +1,4 @@
 return {
-	_credits = {
-		_icy = "xglacial",
-		_hexr = "xyz.hexr",
-		_xred = "Xred#6001",
-		_img = "9329990575"
-	},
 
 	_event_connection = {
 
@@ -13,7 +7,7 @@ return {
 		},
 
 		_CHRISTMAS_CONNECTION = {
-			_christmas = false
+			_christmas = true
 		}
 	},
 
